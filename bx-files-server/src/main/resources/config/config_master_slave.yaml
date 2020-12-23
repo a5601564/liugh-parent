@@ -72,7 +72,7 @@
 #  cloud_files:
 #    url: jdbc:mysql://192.168.1.75:3306/cloud_files?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
 #    username: root
-#    password: root
+#    password: 5601564a
 #    connectionTimeoutMilliseconds: 30000
 #    idleTimeoutMilliseconds: 60000
 #    maxLifetimeMilliseconds: 1800000

@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://${bx.ip}:3306/tx-manager?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
     username: root
-    password: root
+    password: 5601564a
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
@@ -63,7 +63,7 @@ tx-lcn:
   driver-class-name: com.mysql.jdbc.Driver
   jdbc-url: jdbc:mysql://${bx.ip}:3306/tx-logger?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
   username: root
-  password: root
+  password: 5601564a
   manager:
     host: ${bx.ip}
     port: 8070    # TxClient连接请求端口

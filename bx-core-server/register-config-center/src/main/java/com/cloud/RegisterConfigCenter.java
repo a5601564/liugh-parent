@@ -9,7 +9,6 @@ import java.io.InputStream;
 public class RegisterConfigCenter {
 
     public static void main(String[] args) {
-
 //        System.out.println(System.getProperty("user.dir").replace("\\","/")+"/gfc-core-server/register-config-center/src/main/java/com/cloud/");
         String resource = RegisterConfigCenter.class.getResource("").toString().replace("target/classes","src/main/java");
 //        String path = resource+ "nacos/bin/startup.cmd -m standalone";

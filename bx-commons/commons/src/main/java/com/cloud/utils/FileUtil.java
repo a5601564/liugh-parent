@@ -7,8 +7,6 @@ import org.apache.tools.zip.ZipFile;
 import org.apache.tools.zip.ZipOutputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
@@ -1041,29 +1039,6 @@ public class FileUtil {
             if (out != null) out.close();
         }
         return out.toString();
-    }
-
-    public static String image2Base64String(InputStream content) throws Exception {
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        try {
-            int length = 0;
-            byte[] buffer = new byte[1024];
-            while ((length = content.read(buffer)) > 0) {
-                out.write(buffer, 0, length);
-            }
-        } finally {
-            if (content != null) content.close();
-            if (out != null) out.close();
-        }
-        BASE64Encoder encoder = new BASE64Encoder();
-        return encoder.encode(out.toByteArray());
-    }
-
-    public static byte[] base64String2Image(String base64String) throws Exception {
-        if (ComUtil.isEmpty(base64String)) return null;
-        base64String = base64String.replaceAll("data:image/(jpg|png|jpeg);base64,", "");
-        BASE64Decoder decoder = new BASE64Decoder();
-        return decoder.decodeBuffer(base64String);
     }
 
 //    public static void main(String[] args) throws Exception {
