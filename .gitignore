@@ -17,3 +17,5 @@ logs/
 *.db
 /*.db
 /.txlcn/
+/bx-core-server/register-config-center/src/main/java/com/cloud/nacos/data/
+
